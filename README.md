@@ -1,1 +1,4 @@
 # FridayProject4
+Madlib Friday Project 1
+The program begins by presenting an initial instruction to the user, guiding them through the process of answering prompts to create a personalized story (Line 2). Subsequently, a series of input functions are employed to solicit user responses for different components of the madlib story, such as adjectives, nouns, and foods. These responses are stored in corresponding variables, facilitating the integration of user input into the narrative (Lines 5-11). The completed madlib story is then displayed using the print function, incorporating the stored variables and formatted string literals to seamlessly weave the user's input into a cohesive and humorous narrative (Lines 14-18). This approach emphasizes user engagement by utilizing interactive prompts and ensuring a personalized storytelling experience.
+
