@@ -2,13 +2,12 @@ import random
 
 def generate_random_numbers(powerball=False):
     # Generate 5 random numbers between 1 and 69
-    random_numbers = [random.randint(1, 69) for _ in range(5)]
+    main_numbers = [random.randint(1, 69) for _ in range(5)]
     
     # Add one more random number between 1 and 26 if powerball is True
-    if powerball:
-        random_numbers.append(random.randint(1, 26))
+    powerball_number = random.randint(1, 26) if powerball else None
     
-    return random_numbers
+    return main_numbers, powerball_number
 
 if __name__ == "__main__":
     # Ask the user whether they want Powerball numbers
@@ -16,9 +15,11 @@ if __name__ == "__main__":
     
     # Check the user's input
     if want_powerball == "yes":
-        # Generate a list of 6 random numbers, including the last one between 1 and 26
-        random_numbers = generate_random_numbers(powerball=True)
-        print("Generated random numbers:", random_numbers)
+        # Generate a list of 5 main numbers and one powerball number
+        main_numbers, powerball_number = generate_random_numbers(powerball=True)
+        # Format and print the generated numbers
+        formatted_numbers = "  ".join(map(str, main_numbers)) + "    " + str(powerball_number)
+        print("Generated random numbers:", formatted_numbers)
     elif want_powerball == "no":
         # If the user says "no," don't generate any numbers
         print("No numbers generated. Have a great day!")
